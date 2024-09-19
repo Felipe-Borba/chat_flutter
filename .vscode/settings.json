@@ -28,5 +28,6 @@
     "activityBar.background": "#26226E",
     "titleBar.activeBackground": "#352F99",
     "titleBar.activeForeground": "#FBFBFE"
-  }
+  },
+  // "cmake.sourceDirectory": "/Users/felipe/Developer/fluter/chat_flutter/linux/flutter"
 }

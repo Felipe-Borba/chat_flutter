@@ -1,4 +1,5 @@
 import 'package:chat_flutter/data/users_data.dart';
+import 'package:chat_flutter/services/get_users.dart';
 import 'package:chat_flutter/views/detail_page.dart';
 import 'package:flutter/material.dart';
 
@@ -39,12 +40,13 @@ class HomePage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DetailPage(
-                          user: users[index]
-                        )),
-                      );
+                      // getUsers();
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => DetailPage(
+                      //     user: users[index]
+                      //   )),
+                      // );
                     },
                     child: Container(
                       color: Colors.white,
