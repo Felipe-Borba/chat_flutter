@@ -1,3 +1,4 @@
+import 'package:chat_flutter/views/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +20,7 @@ class MainApp extends StatelessWidget {
         useMaterial3: false,
         fontFamily: GoogleFonts.raleway().fontFamily,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
