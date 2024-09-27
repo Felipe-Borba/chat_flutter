@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../components/custom_input.dart';
 import '../components/social_auth.dart';
+import 'register_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -25,7 +26,12 @@ class LoginPage extends StatelessWidget {
               children: [
                 const Text("Ainda não tem um conta?"),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const RegisterPage()),
+                    );
+                  },
                   child: const Text("Cadastre-se"),
                 ),
               ],

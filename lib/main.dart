@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: false,
-        fontFamily: GoogleFonts.raleway().fontFamily,
+        fontFamily: GoogleFonts.adamina().fontFamily,
       ),
       home: const LoginPage(),
     );
