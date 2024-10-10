@@ -20,17 +20,18 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          useMaterial3: false,
-          fontFamily: GoogleFonts.adamina().fontFamily,
-        ),
-        home: const FeedbackPage()
-        // initialRoute: "/login",
-        // routes: {
-        //   "/": (_) => HomePage(),
-        //   "/login": (_) => LoginPage(),
-        // },
-        );
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: false,
+        fontFamily: GoogleFonts.adamina().fontFamily,
+      ),
+      // home: const FeedbackPage()
+      initialRoute: "/login",
+      routes: {
+        "/": (_) => HomePage(),
+        "/login": (_) => LoginPage(),
+        "/feedback": (_) => FeedbackPage()
+      },
+    );
   }
 }

@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
         onPressed: () async {
           try {
             await FirebaseAuthService().login();
-            Navigator.pushReplacementNamed(context, "/");
+            Navigator.pushReplacementNamed(context, "/feedback");
           } catch (e) {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(

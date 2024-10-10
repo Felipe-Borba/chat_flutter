@@ -24,4 +24,13 @@ class FirebaseAuthService {
       throw e;
     }
   }
+
+  checkUser() async {
+    var user = auth.currentUser;
+    if (user != null) {
+      return user;
+    } else {
+      throw Exception("Usuario não logado");
+    }
+  }
 }
