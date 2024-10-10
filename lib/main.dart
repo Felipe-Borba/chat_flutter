@@ -1,4 +1,5 @@
 import 'package:chat_flutter/firebase_options.dart';
+import 'package:chat_flutter/views/feedback_page.dart';
 import 'package:chat_flutter/views/home_page.dart';
 import 'package:chat_flutter/views/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -19,17 +20,17 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: false,
-        fontFamily: GoogleFonts.adamina().fontFamily,
-      ),
-      // home: const LoginPage(),
-      initialRoute: "/login",
-      routes: {
-        "/": (_) => HomePage(),
-        "/login": (_) => LoginPage(),
-      },
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: false,
+          fontFamily: GoogleFonts.adamina().fontFamily,
+        ),
+        home: const FeedbackPage()
+        // initialRoute: "/login",
+        // routes: {
+        //   "/": (_) => HomePage(),
+        //   "/login": (_) => LoginPage(),
+        // },
+        );
   }
 }
