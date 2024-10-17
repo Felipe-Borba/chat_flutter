@@ -15,4 +15,12 @@ class FirestoreService {
       "created_at": DateTime.now()
     });
   }
+
+  getFeedback() async {
+    var feedbacks = await _db
+        .collection("Feedbacks")
+        .orderBy("created_at", descending: true)
+        .get();
+    return feedbacks.docs;
+  }
 }
