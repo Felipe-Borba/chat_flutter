@@ -47,10 +47,14 @@ class ChatPage extends StatelessWidget {
                         message["created_at"],
                         style: TextStyle(fontSize: 10),
                       ),
-                      Icon(
-                        Icons.check,
-                        size: 18,
-                      )
+                      message["sender"] == "Caio"
+                          ? Icon(
+                              Icons.check,
+                              size: 18,
+                              color:
+                                  message["read"] ? Colors.blue : Colors.grey,
+                            )
+                          : SizedBox()
                     ],
                   ),
                 ],

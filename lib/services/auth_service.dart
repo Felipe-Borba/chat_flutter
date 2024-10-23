@@ -26,11 +26,20 @@ class FirebaseAuthService {
   }
 
   checkUser() async {
-    var user = auth.currentUser;
-    if (user != null) {
-      return user;
+    var userName = auth.currentUser?.displayName;
+    if (userName != null) {
+      return userName;
     } else {
       throw Exception("Usuario não logado");
     }
+  }
+
+  register(name, email, password) async {
+    var user = await auth.createUserWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+    await user.user!.updateDisplayName(name);
+    return user;
   }
 }
