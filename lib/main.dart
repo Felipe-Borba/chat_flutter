@@ -1,4 +1,5 @@
 import 'package:chat_flutter/firebase_options.dart';
+import 'package:chat_flutter/views/chat_page.dart';
 import 'package:chat_flutter/views/feedback_page.dart';
 import 'package:chat_flutter/views/home_page.dart';
 import 'package:chat_flutter/views/login_page.dart';
@@ -26,11 +27,12 @@ class MainApp extends StatelessWidget {
         fontFamily: GoogleFonts.adamina().fontFamily,
       ),
       // home: const FeedbackPage()
-      initialRoute: "/login",
+      initialRoute: "/chat",
       routes: {
-        "/": (_) => HomePage(),
-        "/login": (_) => LoginPage(),
-        "/feedback": (_) => FeedbackPage()
+        "/": (_) => const HomePage(),
+        "/login": (_) => const LoginPage(),
+        "/feedback": (_) => FeedbackPage(),
+        "/chat": (_) => const ChatPage(),
       },
     );
   }
